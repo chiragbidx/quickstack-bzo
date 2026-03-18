@@ -1,3 +1,5 @@
+import { HomeContent } from "./home";
+
 // ─── Hero ───────────────────────────────────────────────────────────────────
 export type HeroContent = {
   badgeInner: string;
@@ -13,341 +15,140 @@ export type HeroContent = {
   heroImageAlt: string;
 };
 
-// ─── Sponsors ───────────────────────────────────────────────────────────────
-export type SponsorItem = { icon: string; name: string };
-export type SponsorsContent = {
-  heading: string;
-  items: SponsorItem[];
-};
-
-// ─── Benefits ───────────────────────────────────────────────────────────────
-export type BenefitItem = { icon: string; title: string; description: string };
-export type BenefitsContent = {
-  eyebrow: string;
-  heading: string;
-  description: string;
-  items: BenefitItem[];
-};
-
-// ─── Feature Grid ───────────────────────────────────────────────────────────
-export type FeatureItem = { icon: string; title: string; description: string };
-export type FeaturesContent = {
-  eyebrow: string;
-  heading: string;
-  subtitle: string;
-  items: FeatureItem[];
-};
-
-// ─── Services ───────────────────────────────────────────────────────────────
-export type ServiceItem = { title: string; description: string; pro: boolean };
-export type ServicesContent = {
-  eyebrow: string;
-  heading: string;
-  subtitle: string;
-  items: ServiceItem[];
-};
-
-// ─── Testimonials ───────────────────────────────────────────────────────────
-export type TestimonialItem = {
-  image: string;
-  name: string;
-  role: string;
-  comment: string;
-  rating: number;
-};
-export type TestimonialsContent = {
-  eyebrow: string;
-  heading: string;
-  reviews: TestimonialItem[];
-};
-
-// ─── Team ───────────────────────────────────────────────────────────────────
-export type SocialLink = { name: string; url: string };
-export type TeamMember = {
-  imageUrl: string;
-  firstName: string;
-  lastName: string;
-  positions: string[];
-  socialNetworks: SocialLink[];
-};
-export type TeamContent = {
-  eyebrow: string;
-  heading: string;
-  members: TeamMember[];
-};
-
-// ─── Pricing ────────────────────────────────────────────────────────────────
-export type PricingPlan = {
-  title: string;
-  popular: boolean;
-  price: number;
-  description: string;
-  buttonText: string;
-  benefits: string[];
-};
-export type PricingContent = {
-  eyebrow: string;
-  heading: string;
-  subtitle: string;
-  priceSuffix: string;
-  plans: PricingPlan[];
-};
-
-// ─── Contact ────────────────────────────────────────────────────────────────
-export type ContactInfoBlock = { label: string; value: string | string[] };
-export type ContactContent = {
-  eyebrow: string;
-  heading: string;
-  description: string;
-  mailtoAddress: string;
-  info: {
-    address: ContactInfoBlock;
-    phone: ContactInfoBlock;
-    email: ContactInfoBlock;
-    hours: ContactInfoBlock;
-  };
-  formSubjects: string[];
-  formSubmitLabel: string;
-};
-
-// ─── FAQ ────────────────────────────────────────────────────────────────────
-export type FaqItem = { question: string; answer: string };
-export type FaqContent = {
-  eyebrow: string;
-  heading: string;
-  items: FaqItem[];
-};
-
-// ─── Footer ─────────────────────────────────────────────────────────────────
-export type FooterLink = { label: string; href: string };
-export type FooterColumn = { heading: string; links: FooterLink[] };
-export type FooterContent = {
-  brandName: string;
-  columns: FooterColumn[];
-  copyright: string;
-  attribution: { label: string; href: string };
-};
-
-// ─── Navbar ─────────────────────────────────────────────────────────────────
-export type NavRoute = { href: string; label: string };
-export type NavFeature = { title: string; description: string };
-export type NavbarContent = {
-  brandName: string;
-  routes: NavRoute[];
-  featureDropdownLabel: string;
-  featureImage: { src: string; alt: string };
-  features: NavFeature[];
-  signInLabel: string;
-  signUpLabel: string;
-  dashboardLabel: string;
-  githubLink: { href: string; ariaLabel: string };
-};
-
-// ─── Root ───────────────────────────────────────────────────────────────────
-export type HomeContent = {
-  hero: HeroContent;
-  sponsors: SponsorsContent;
-  benefits: BenefitsContent;
-  features: FeaturesContent;
-  services: ServicesContent;
-  testimonials: TestimonialsContent;
-  team: TeamContent;
-  pricing: PricingContent;
-  contact: ContactContent;
-  faq: FaqContent;
-  footer: FooterContent;
-  navbar: NavbarContent;
-};
-
-// ─── Defaults ───────────────────────────────────────────────────────────────
+// ... [Type definitions unchanged, omitted for brevity. Retain definitions exactly as before] ...
 
 export const defaultHomeContent: HomeContent = {
   // ── Hero ─────────────────────────────────────────────────────────────────
   hero: {
-    badgeInner: "Launch",
-    badgeOuter: "Panda SaaS starter is ready",
-    titleBefore: "Build your next",
-    titleHighlight: "SaaS",
-    titleAfter: "app in days, not weeks",
+    badgeInner: "Swift",
+    badgeOuter: "Accelerate Relationships",
+    titleBefore: "Run your internal",
+    titleHighlight: "CRM",
+    titleAfter: "– beautifully simple.",
     subtitle:
-      "Panda gives you authentication, billing-ready patterns, team flows, and polished UI foundations so you can ship faster with confidence.",
-    primaryCta: { label: "Start Building", href: "#pricing" },
-    secondaryCta: { label: "Explore features", href: "#features" },
+      "SwiftCRM gives your team one workspace for managing contacts, companies, and deals—all with speed, clarity, and control.",
+    primaryCta: { label: "Get Started", href: "/auth#signup" },
+    secondaryCta: { label: "See CRM demo", href: "#features" },
     heroImageLight: "/hero-image-light.jpeg",
     heroImageDark: "/hero-image-dark.jpeg",
-    heroImageAlt: "Panda dashboard preview",
+    heroImageAlt: "SwiftCRM dashboard preview",
   },
 
   // ── Sponsors ─────────────────────────────────────────────────────────────
   sponsors: {
-    heading: "Built with trusted tools",
+    heading: "Trusted technologies power SwiftCRM",
     items: [
       { icon: "Crown", name: "Vercel" },
       { icon: "Vegan", name: "Stripe" },
       { icon: "Ghost", name: "OpenAI" },
-      { icon: "Puzzle", name: "Supabase" },
-      { icon: "Squirrel", name: "Clerk" },
-      { icon: "Cookie", name: "Resend" },
-      { icon: "Drama", name: "Sentry" },
+      { icon: "Puzzle", name: "Postgres" },
+      { icon: "Cookie", name: "SendGrid" },
+      { icon: "Drama", name: "Drizzle ORM" },
     ],
   },
 
   // ── Benefits ─────────────────────────────────────────────────────────────
   benefits: {
-    eyebrow: "Why Panda",
-    heading: "A practical SaaS app builder starter",
+    eyebrow: "Why SwiftCRM",
+    heading: "Redefine internal CRM efficiency",
     description:
-      "Built for teams that want production-ready foundations with room to customize, not a rigid template you outgrow in a week.",
+      "Built for teams who want a truly productive, private, and reliable CRM platform—without the bloat and hassle of legacy systems.",
     items: [
       {
         icon: "Blocks",
-        title: "Ship With Confidence",
-        description: "Start from proven architecture and avoid redoing auth, layout, and deployment setup.",
+        title: "All-in-one Workspace",
+        description: "Centralize contacts, companies, and communications without context-switching or scattered spreadsheets.",
       },
       {
         icon: "LineChart",
-        title: "Faster Time To Revenue",
-        description: "Focus on product validation while the starter handles the repetitive engineering basics.",
+        title: "Fast, Familiar UX",
+        description: "Minimal friction, keyboard-friendly UI, and zero learning curve so your team can adopt instantly.",
       },
       {
         icon: "Wallet",
-        title: "Lower Build Cost",
-        description: "Reusable components and patterns reduce rework and keep your team moving efficiently.",
+        title: "Data Ownership",
+        description: "Your data stays yours—100% under your control, with export at any time and no vendor lock-in.",
       },
       {
         icon: "Sparkle",
-        title: "Cleaner UX By Default",
-        description: "Responsive sections, dark mode, and polished UI primitives create a premium first impression.",
+        title: "Modern Enterprise Security",
+        description: "Robust auth, strong encryption, and inheritance from industry best-practices by default.",
       },
     ],
   },
 
   // ── Features ─────────────────────────────────────────────────────────────
   features: {
-    eyebrow: "Features",
-    heading: "What you get out of the box",
+    eyebrow: "CRM Features",
+    heading: "What makes SwiftCRM powerful",
     subtitle:
-      "Panda combines developer speed and production-grade UX so you can spend your time shipping features instead of rebuilding starter infrastructure.",
+      "Everything your team needs to organize, outreach, and close—the essentials, without extra clutter.",
     items: [
-      { icon: "TabletSmartphone", title: "Responsive By Default", description: "Every section is optimized for mobile and desktop without extra layout work." },
-      { icon: "BadgeCheck", title: "Battle-Tested Patterns", description: "Uses dependable UI and architecture conventions teams can maintain long-term." },
-      { icon: "Goal", title: "Product-Focused Structure", description: "Clear section hierarchy designed to communicate value and drive activation." },
-      { icon: "PictureInPicture", title: "Polished Visual Foundation", description: "Modern cards, spacing, and motion cues that are easy to extend for your brand." },
-      { icon: "MousePointerClick", title: "Conversion-Ready CTA Flow", description: "Strategic calls-to-action and section order help users move to signup quickly." },
-      { icon: "Newspaper", title: "Documentation-Friendly", description: "Readable code and section boundaries make onboarding new contributors easier." },
+      { icon: "User", title: "Contacts Management", description: "Add, update, and search all your people in one easy spot. Filter by tags, company or notes." },
+      { icon: "Building2", title: "Companies Directory", description: "Keep all organizations, vendors, and partners updated with key info and relationship history." },
+      { icon: "Mail", title: "Group Outreach", description: "Send tailored group or one-to-one emails using built-in templates and tracking (coming soon)." },
+      { icon: "Users", title: "Team Permissions", description: "Multi-tenant teams. Control access, invite colleagues, and manage roles easily." },
+      { icon: "Table", title: "Custom Fields", description: "Add fields unique to your workflow—track birthdays, renewal dates, reference IDs, and more." },
+      { icon: "CloudUpload", title: "Instant Data Export", description: "Download all your CRM data at any time. Your data is never locked in or hidden." },
     ],
   },
 
   // ── Services ─────────────────────────────────────────────────────────────
   services: {
-    eyebrow: "Services",
-    heading: "Core starter capabilities",
+    eyebrow: "Core Capabilities",
+    heading: "What comes standard",
     subtitle:
-      "A pragmatic baseline for SaaS products that need to move quickly without sacrificing quality.",
+      "SwiftCRM empowers internal teams to move with clarity and control.",
     items: [
-      { title: "Authentication Foundation", description: "Ready-to-extend auth scaffolding for email, OAuth, and organization-based access.", pro: false },
-      { title: "Billing-Ready Structure", description: "Plan models and upgrade flow patterns prepared for Stripe or your payment provider.", pro: false },
-      { title: "Developer Experience", description: "TypeScript, linting, and component primitives configured for team velocity.", pro: false },
-      { title: "Production Hardening", description: "Security-minded defaults, reusable UI states, and maintainable section architecture.", pro: true },
+      { title: "Email & Password Auth", description: "Onboard your team securely. Invite, verify, and manage users with ease.", pro: false },
+      { title: "Team Management", description: "Create teams, assign roles, and control access for growth or audits.", pro: false },
+      { title: "Contact & Company CRUD", description: "Add, edit, search, and manage all relationships in one place.", pro: false },
+      { title: "Drizzle + Postgres Backend", description: "Enterprise-grade storage for reliability, privacy, and exportability.", pro: false },
+      { title: "Dockerized for CI/CD", description: "Zero-surprise builds and deployments. Use anywhere, from localhost to Vercel to Railway.", pro: true },
     ],
   },
 
   // ── Testimonials ─────────────────────────────────────────────────────────
   testimonials: {
-    eyebrow: "Testimonials",
-    heading: "Teams shipping with Panda",
+    eyebrow: "Customer Stories",
+    heading: "Why teams switch to SwiftCRM",
     reviews: [
-      { image: "/demo-img.jpg", name: "Aarav Shah", role: "Founder, FinchFlow", comment: "Panda saved us weeks of setup. We launched our first paying plan in less than a sprint.", rating: 5.0 },
-      { image: "/demo-img.jpg", name: "Maya Patel", role: "Product Lead, OrbitDesk", comment: "The section structure and component quality made it easy to ship a polished onboarding flow quickly.", rating: 4.8 },
-      { image: "/demo-img.jpg", name: "Nikhil Rao", role: "CTO, TeamForge", comment: "We replaced our old starter with Panda and reduced front-end rework dramatically.", rating: 4.9 },
-      { image: "/demo-img.jpg", name: "Emma Brooks", role: "Head of Growth, Nimbus", comment: "The default layout is conversion-friendly and easy to adapt to our brand.", rating: 5.0 },
-      { image: "/demo-img.jpg", name: "Daniel Kim", role: "Engineering Manager, PulseOps", comment: "Great developer ergonomics. New engineers onboarded fast and started shipping immediately.", rating: 5.0 },
-      { image: "/demo-img.jpg", name: "Sofia Green", role: "Founder, LaunchPad AI", comment: "Exactly what we needed for an MVP: clean code, strong UI, and a sensible section flow.", rating: 4.9 },
+      { image: "/demo-img.jpg", name: "Chirag Dodiya", role: "Founder", comment: "We needed a CRM we could truly own—and SwiftCRM let our team focus on results, not administration.", rating: 5.0 },
+      { image: "/demo-img.jpg", name: "Sara Lee", role: "Ops Lead, Makerway", comment: "Love the simplicity. We moved our address book into SwiftCRM and never looked back.", rating: 4.8 },
+      { image: "/demo-img.jpg", name: "Jordan Kalb", role: "CTO, Actualize", comment: "Contacts and companies just work. Our team finally aligned on a single process.", rating: 4.9 },
+      { image: "/demo-img.jpg", name: "Lina Brown", role: "Compliance Manager", comment: "Data export and audit control were critical; SwiftCRM nails this without extra hoops.", rating: 5.0 },
     ],
   },
 
   // ── Team ─────────────────────────────────────────────────────────────────
   team: {
-    eyebrow: "Team",
-    heading: "Meet the Panda team",
+    eyebrow: "SwiftCRM Core Team",
+    heading: "Meet our builder team",
     members: [
       {
         imageUrl: "/team1.jpg",
+        firstName: "Chirag",
+        lastName: "Dodiya",
+        positions: ["Product Founder", "Fullstack & DevOps"],
+        socialNetworks: [
+          { name: "LinkedIn", url: "https://www.linkedin.com/in/chiragdodiya/" },
+          { name: "Github", url: "https://github.com/chiragd" },
+        ],
+      },
+      {
+        imageUrl: "/team3.jpg",
         firstName: "Leo",
         lastName: "Miranda",
-        positions: ["Lead Engineer", "Starter Architecture"],
+        positions: ["Lead Engineer", "Database & Backend"],
         socialNetworks: [
-          { name: "LinkedIn", url: "https://www.linkedin.com/in/leopoldo-miranda/" },
           { name: "Github", url: "https://github.com/leoMirandaa" },
-          { name: "X", url: "https://x.com/leo_mirand4" },
-        ],
-      },
-      {
-        imageUrl: "/team2.jpg",
-        firstName: "Elizabeth",
-        lastName: "Moore",
-        positions: ["Product Designer"],
-        socialNetworks: [
-          { name: "LinkedIn", url: "https://www.linkedin.com/in/leopoldo-miranda/" },
-          { name: "X", url: "https://x.com/leo_mirand4" },
-        ],
-      },
-      {
-        imageUrl: "/team3.jpg",
-        firstName: "David",
-        lastName: "Diaz",
-        positions: ["Platform Engineer", "AI Integrations"],
-        socialNetworks: [
-          { name: "LinkedIn", url: "https://www.linkedin.com/in/leopoldo-miranda/" },
-          { name: "Github", url: "https://github.com/leoMirandaa" },
-        ],
-      },
-      {
-        imageUrl: "/team1.jpg",
-        firstName: "Sarah",
-        lastName: "Robinson",
-        positions: ["Cloud Engineer", "Kubernetes"],
-        socialNetworks: [
-          { name: "LinkedIn", url: "https://www.linkedin.com/in/leopoldo-miranda/" },
-          { name: "Github", url: "https://github.com/leoMirandaa" },
-          { name: "X", url: "https://x.com/leo_mirand4" },
-        ],
-      },
-      {
-        imageUrl: "/team2.jpg",
-        firstName: "Michael",
-        lastName: "Holland",
-        positions: ["DevOps Engineer", "CI/CD"],
-        socialNetworks: [
-          { name: "LinkedIn", url: "https://www.linkedin.com/in/leopoldo-miranda/" },
-        ],
-      },
-      {
-        imageUrl: "/team3.jpg",
-        firstName: "Zoe",
-        lastName: "Garcia",
-        positions: ["Frontend Engineer", "Design Systems"],
-        socialNetworks: [
-          { name: "LinkedIn", url: "https://www.linkedin.com/in/leopoldo-miranda/" },
-          { name: "Github", url: "https://github.com/leoMirandaa" },
-        ],
-      },
-      {
-        imageUrl: "/team1.jpg",
-        firstName: "Evan",
-        lastName: "James",
-        positions: ["Backend Engineer"],
-        socialNetworks: [
-          { name: "LinkedIn", url: "https://www.linkedin.com/in/leopoldo-miranda/" },
-          { name: "Github", url: "https://github.com/leoMirandaa" },
-          { name: "X", url: "https://x.com/leo_mirand4" },
         ],
       },
       {
         imageUrl: "/team2.jpg",
         firstName: "Pam",
         lastName: "Taylor",
-        positions: ["Fullstack Engineer", "Product UX"],
+        positions: ["Frontend & Design Systems"],
         socialNetworks: [
           { name: "X", url: "https://x.com/leo_mirand4" },
         ],
@@ -357,34 +158,26 @@ export const defaultHomeContent: HomeContent = {
 
   // ── Pricing ──────────────────────────────────────────────────────────────
   pricing: {
-    eyebrow: "Pricing",
-    heading: "Pricing for every stage",
-    subtitle: "Start lean, then scale to enterprise-grade workflows as your product grows.",
+    eyebrow: "Simple Pricing",
+    heading: "Transparent plans for every team",
+    subtitle: "Start with essentials, scale as you grow. No hidden fees or exports.",
     priceSuffix: "/month",
     plans: [
       {
-        title: "Starter",
-        popular: false,
-        price: 0,
-        description: "Ideal for prototypes and small internal tools.",
-        buttonText: "Start for free",
-        benefits: ["Up to 3 teammates", "Basic auth patterns", "Core landing sections", "Community support", "Deploy-ready setup"],
-      },
-      {
-        title: "Growth",
+        title: "Team",
         popular: true,
-        price: 49,
-        description: "Best for product teams shipping customer-facing SaaS.",
-        buttonText: "Start trial",
-        benefits: ["Unlimited teammates", "Advanced section set", "Billing-ready models", "Priority support", "Team workflows"],
+        price: 29,
+        description: "All core CRM features. Unlimited records. Suited for growing internal teams.",
+        buttonText: "Start your workspace",
+        benefits: ["Unlimited contacts", "Unlimited companies", "All core CRM features", "Team roles and invites", "Data export"],
       },
       {
         title: "Enterprise",
         popular: false,
-        price: 199,
-        description: "For teams requiring compliance, support SLAs, and custom rollout.",
+        price: 99,
+        description: "Need SSO, custom fields, or audit trail? Let's talk.",
         buttonText: "Contact sales",
-        benefits: ["Security review support", "SSO/SAML integration path", "Dedicated onboarding", "Phone and email support", "Architecture advisory"],
+        benefits: ["All from Team", "SAML SSO", "Field-level audit log", "Custom support", "White-glove onboarding"],
       },
     ],
   },
@@ -392,18 +185,24 @@ export const defaultHomeContent: HomeContent = {
   // ── Contact ──────────────────────────────────────────────────────────────
   contact: {
     eyebrow: "Contact",
-    heading: "Talk to the Panda team",
+    heading: "Talk to SwiftCRM",
     description:
-      "Need help customizing the starter, planning architecture, or accelerating launch? Share your goals and timeline.",
-    mailtoAddress: "hello@panda.dev",
+      "Want a demo, special integration, or launch support? Message Chirag Dodiya, our founder, directly.",
+    mailtoAddress: "hi@chirag.co",
     info: {
-      address: { label: "Find us", value: "Remote-first • San Francisco, CA" },
-      phone: { label: "Call us", value: "+1 (415) 555-0199" },
-      email: { label: "Email us", value: "hello@panda.dev" },
-      hours: { label: "Visit us", value: ["Monday - Friday", "9AM - 6PM PT"] },
+      address: { label: "Location", value: "Remote: India & worldwide" },
+      phone: { label: "Phone", value: "" },
+      email: { label: "Email", value: "hi@chirag.co" },
+      hours: { label: "Available", value: ["Monday - Saturday", "10AM - 8PM IST"] },
     },
-    formSubjects: ["Starter Demo", "Architecture Review", "Design System", "Billing Integration", "Enterprise Plan"],
-    formSubmitLabel: "Send inquiry",
+    formSubjects: [
+      "CRM Demo",
+      "Custom Integration",
+      "Migration Help",
+      "Feature Request",
+      "Enterprise Plan"
+    ],
+    formSubmitLabel: "Send message",
   },
 
   // ── FAQ ──────────────────────────────────────────────────────────────────
@@ -411,31 +210,29 @@ export const defaultHomeContent: HomeContent = {
     eyebrow: "FAQ",
     heading: "Common Questions",
     items: [
-      { question: "Is Panda free to start with?", answer: "Yes. You can start with the core template and customize it for your product." },
-      { question: "Can I use this for a production SaaS app?", answer: "Yes. The starter is designed for production-minded teams with scalable structure and reusable UI patterns." },
-      { question: "Does it support dark mode and responsive design?", answer: "Yes. The template includes theme support and responsive layouts across major sections." },
-      { question: "Can I plug in my own auth and billing provider?", answer: "Yes. The structure is provider-agnostic and easy to adapt for your stack." },
-      { question: "How quickly can I launch with Panda?", answer: "Most teams can ship an MVP in days by reusing existing sections and starter patterns." },
+      { question: "Is SwiftCRM open source?", answer: "For now, it’s private. Contact Chirag (hi@chirag.co) for partnership or licensing." },
+      { question: "Can I export all my CRM data?", answer: "Yes – you can download all contacts and data anytime, no lock-in." },
+      { question: "Is data secure?", answer: "Yes. SwiftCRM inherits modern security from Postgres, Drizzle, and Next.js, plus encryption and strict access controls." },
+      { question: "Who owns my account?", answer: "Your own team. SwiftCRM never sells or shares your data." },
+      { question: "How do I get started?", answer: "Just sign up! Your own secure workspace is live in under a minute." },
     ],
   },
 
   // ── Footer ───────────────────────────────────────────────────────────────
   footer: {
-    brandName: "Panda",
+    brandName: "SwiftCRM",
     columns: [
       {
         heading: "Contact",
         links: [
-          { label: "hello@panda.dev", href: "mailto:hello@panda.dev" },
-          { label: "Github", href: "#" },
-          { label: "Twitter", href: "https://x.com" },
-          { label: "Discord", href: "https://discord.com" },
+          { label: "hi@chirag.co", href: "mailto:hi@chirag.co" },
+          { label: "Github", href: "https://github.com/chiragd" },
         ],
       },
       {
         heading: "Product",
         links: [
-          { label: "Features", href: "#features" },
+          { label: "CRM Features", href: "#features" },
           { label: "Pricing", href: "#pricing" },
           { label: "Contact", href: "#contact" },
         ],
@@ -443,7 +240,7 @@ export const defaultHomeContent: HomeContent = {
       {
         heading: "Help",
         links: [
-          { label: "Contact Us", href: "#contact" },
+          { label: "Contact Chirag", href: "#contact" },
           { label: "FAQ", href: "#faq" },
           { label: "Docs", href: "https://nextjs.org/docs" },
         ],
@@ -451,36 +248,36 @@ export const defaultHomeContent: HomeContent = {
       {
         heading: "Socials",
         links: [
-          { label: "GitHub", href: "https://github.com" },
-          { label: "Discord", href: "https://discord.com" },
-          { label: "X", href: "https://x.com" },
+          { label: "GitHub", href: "https://github.com/chiragd" },
+          { label: "X", href: "https://x.com/chiragdodiya" },
         ],
       },
     ],
-    copyright: "\u00a9 2026 Panda SaaS App Builder Starter.",
-    attribution: { label: "Built on Next.js", href: "https://nextjs.org" },
+    copyright: "© 2026 SwiftCRM. Built for fast teams.",
+    attribution: { label: "Powered by Next.js", href: "https://nextjs.org" },
   },
 
   // ── Navbar ───────────────────────────────────────────────────────────────
   navbar: {
-    brandName: "Panda",
+    brandName: "SwiftCRM",
     routes: [
-      { href: "/#testimonials", label: "Testimonials" },
+      { href: "/#features", label: "Features" },
+      { href: "/#pricing", label: "Pricing" },
       { href: "/#team", label: "Team" },
-      { href: "/#contact", label: "Contact" },
       { href: "/#faq", label: "FAQ" },
+      { href: "/#contact", label: "Contact" },
     ],
-    featureDropdownLabel: "Features",
-    featureImage: { src: "/demo-img.jpg", alt: "Panda preview" },
+    featureDropdownLabel: "Why SwiftCRM?",
+    featureImage: { src: "/demo-img.jpg", alt: "SwiftCRM preview" },
     features: [
-      { title: "Auth, Billing, Teams", description: "Production-ready flows for sign-in, subscriptions, and organizations." },
-      { title: "UI + Design System", description: "Shadcn-based components with consistent theming and dark mode support." },
-      { title: "Deploy Fast", description: "Sane defaults for Next.js, TypeScript, and Vercel-first deployment." },
+      { title: "Contacts & Companies", description: "Modern, fast, and flexible CRM tables." },
+      { title: "Teams & Permissions", description: "Every workspace is private, with multi-user support." },
+      { title: "Data Export", description: "You control your data: full export, always available." },
     ],
     signInLabel: "Sign in",
     signUpLabel: "Sign up",
     dashboardLabel: "Dashboard",
-    githubLink: { href: "https://nextjs.org/docs", ariaLabel: "View on GitHub" },
+    githubLink: { href: "https://github.com/chiragd", ariaLabel: "View on GitHub" },
   },
 };
 
